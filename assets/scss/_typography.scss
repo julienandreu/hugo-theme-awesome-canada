@@ -1,0 +1,22 @@
+/*  typography */
+
+* {
+  font-family: $primary-font;
+}
+
+html {
+  font-size: 7px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media (min-width: 992px) {
+  html {
+    font-size: 10px;
+  }
+}
+

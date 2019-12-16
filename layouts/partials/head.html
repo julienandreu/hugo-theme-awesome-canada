@@ -1,0 +1,37 @@
+<head>
+    <meta charset="utf-8">
+    <title>{{ .Title }}</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description"
+          content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
+    {{ with .Site.Params.Author.Name }}
+        <meta name="author" content="{{ . }}">
+    {{ end }}
+    {{ hugo.Generator }}
+
+    {{ range .Site.Params.plugins.css }}
+        <link rel="stylesheet" href="{{ .URL | absURL }} ">
+    {{ end }}
+    {{ range .Params.plugins.css }}
+        <link rel="stylesheet" href="{{ .URL | absURL }} ">
+    {{ end }}
+
+    {{ $styles := resources.Get "scss/style.scss" | toCSS | minify }}
+    <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ `apple-touch-icon.png` | absURL }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ `favicon-32x32.png` | absURL }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ `favicon-16x16.png` | absURL }}">
+    <link rel="manifest" href="{{ `site.webmanifest` | absURL }}">
+    <link rel="mask-icon" href="{{ `safari-pinned-tab.svg` | absURL }}" color="#222222">
+    <meta name="msapplication-TileColor" content="#222222">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="shortcut icon" href="{{ `favicon.ico` | absURL }}" type="image/x-icon">
+    <link rel="icon" href="{{ `favicon.ico` | absURL }}" type="image/x-icon">
+
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+
+    {{ partial "seo_schema" . }}
+</head>

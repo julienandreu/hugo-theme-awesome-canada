@@ -1,0 +1,41 @@
+
+.wrapper {
+  padding: 2.4rem 0 0;
+  z-index: 5000;
+  position: relative;
+
+  h1 {
+    font-weight: 600;
+    font-size: 6rem;
+    line-height: 7.2rem;
+    margin: 4.8rem 0 0;
+  }
+
+  .infos {
+    .date,
+    .reading {
+      display: inline-block;
+      font-style: italic;
+      font-size: 1.2rem;
+      line-height: 2.4rem;
+      margin: 2.4rem 0 0;
+      color: $text-color;
+    }
+
+    .date {
+      &::after {
+        content: "\00B7";
+      }
+    }
+  }
+
+  &::after {
+    content: "";
+    display: none;
+    position: absolute;
+    bottom: -4.8rem;
+    width: 9.6rem;
+    height: 0.8rem;
+    background: #222222;
+  }
+}

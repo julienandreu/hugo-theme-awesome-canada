@@ -1,0 +1,56 @@
+<footer style="background-image: url({{ .Site.Params.Footer.Background | absURL }})">
+    <div class="author container-md row">
+        <div class="picture order-xl-last order-md-last col-xl-2 col-md-2 col-sm-12">
+            <img class="h-100" src="{{ .Site.Params.Author.Picture | absURL }}" alt="{{ .Site.Params.Author.Name }}"/>
+        </div>
+        <div class="d-xl-none d-md-none col-sm-12"></div>
+        <div class="infos col">
+            <div class="name">
+                {{ .Site.Params.Author.Name | safeHTML }}
+            </div>
+            {{ with .Site.Params.Author.Baseline }}
+                <div class="baseline">
+                    {{ . | safeHTML }}
+                </div>
+            {{ end }}
+            {{ with .Site.Params.Author.Job }}
+                <div class="job">
+                    {{ . | safeHTML }}
+                </div>
+            {{ end }}
+            {{ with .Site.Params.social }}
+                <div class="social">
+                    {{ range . }}
+                        <a href="{{ .link | safeURL }}" title="{{ .title }}" rel="noopener"><i class="{{ .icon }}"></i></a>
+                    {{ end }}
+                </div>
+            {{ end }}
+        </div>
+    </div>
+    <div class="disclaimer">
+        {{ .Site.Params.copyright }}
+    </div>
+</footer>
+
+{{ range .Site.Params.plugins.js}}
+    <script src="{{ .URL | absURL }}"></script>
+{{ end }}
+{{ range .Params.plugins.js}}
+    <script src="{{ .URL | absURL }}"></script>
+{{ end }}
+
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', '{{ .Site.Params.googleAnalitycsID }}', 'auto');
+    ga('send', 'pageview');
+</script>

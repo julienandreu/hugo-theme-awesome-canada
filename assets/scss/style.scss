@@ -1,0 +1,23 @@
+/*!------------------------------------------------------------------
+[MAIN STYLESHEET]
+
+PROJECT:	Awesome Canada
+VERSION:	v0.0.1
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[TABLE OF CONTENTS]
+-------------------------------------------------------------------*/
+@import 'variables';
+@import 'mixins';
+@import 'typography';
+@import 'common';
+@import 'templates/main.scss';
+@import 'templates/animation.scss';
+@import 'templates/header.scss';
+@import 'templates/menu.scss';
+@import 'templates/wrapper.scss';
+@import 'templates/content.scss';
+@import 'templates/list.scss';
+@import 'templates/article.scss';
+@import 'templates/cta.scss';
+@import 'templates/footer.scss';

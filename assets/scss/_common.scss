@@ -1,0 +1,14 @@
+html,
+body {
+  background-color: $body-color;
+  overflow-x: hidden;
+}
+
+* {
+  font-variant-ligatures: contextual;
+}
+
+::selection {
+  background: $text-color-dark;
+  color: $white;
+}

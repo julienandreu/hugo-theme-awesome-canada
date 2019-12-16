@@ -1,0 +1,10 @@
+{{ define "main" }}
+
+    <h1 class="col-12">
+        {{ .Site.Params.Error.Title | safeHTML}}
+    </h1>
+    <div class="content col-12">
+        {{ .Site.Params.Error.Content }}
+    </div>
+
+{{ end }}

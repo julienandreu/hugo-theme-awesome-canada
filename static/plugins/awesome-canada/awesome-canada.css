@@ -1,0 +1,35 @@
+@font-face {
+  font-family: ac;
+  src:         url(fonts/AwesomeCanada-black.woff2) format('woff2');
+  font-weight: 900;
+  font-style:  normal
+  }
+
+@font-face {
+  font-family: ac;
+  src:         url(fonts/AwesomeCanada-medium.woff2) format('woff2');
+  font-weight: 700;
+  font-style:  normal
+  }
+
+@font-face {
+  font-family: ac;
+  src:         url(fonts/AwesomeCanada-bold.woff2) format('woff2');
+  font-weight: 600;
+  font-style:  normal
+  }
+
+@font-face {
+  font-family: ac;
+  src:         url(fonts/AwesomeCanada-italic.woff2) format('woff2');
+  font-weight: 400;
+  font-style:  italic
+  }
+
+@font-face {
+  font-family: ac;
+  src:         url(fonts/AwesomeCanada-regular.woff2) format('woff2');
+  font-weight: 400;
+  font-style:  normal
+  }
+

@@ -1,0 +1,25 @@
+{{ $Enable := ( .Params.Cta.Enable | default .Site.Params.Cta.Enable ) }}
+{{ $Link := ( .Params.Cta.Link | default .Site.Params.Cta.Link ) }}
+{{ $Picture := ( .Params.Cta.Picture | default .Site.Params.Cta.Picture ) }}
+{{ $Title := ( .Params.Cta.Title | default .Site.Params.Cta.Title ) }}
+{{ $Content := ( .Params.Cta.Content | default .Site.Params.Cta.Content ) }}
+
+{{ if $Enable}}
+    <div class="cta">
+        <div class="col-12 row col-12 no-gutters">
+            <article class="col-12 col-md mx-xl-5">
+                <a class="previewLink" href="{{ $Link }}" target="_blank" title="{{ $Title }}" rel="noopener">
+                    <img class="preview w100" src="{{ $Picture | absURL }}" alt="{{ $Title }}" width="100%"/>
+                </a>
+                <div class="body">
+                    <h2 class="title">
+                        {{ $Title | safeHTML }}
+                    </h2>
+                    <p class="summary">
+                        {{ $Content | safeHTML }}
+                    </p>
+                </div>
+            </article>
+        </div>
+    </div>
+{{ end }}

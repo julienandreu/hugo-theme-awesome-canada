@@ -1,0 +1,18 @@
+{{ define "main" }}
+
+    <h1 class="col-12">
+        {{ .Title | markdownify }}
+    </h1>
+    <div class="infos col-12">
+        <div class="date">
+            {{ dateFormat .Site.Params.DateFormat .Date }}
+        </div>
+        <div class="reading">
+            {{ printf .Site.Params.ReadingTime .ReadingTime }}
+        </div>
+    </div>
+    <div class="content col-12">
+        {{ .Content }}
+    </div>
+
+{{ end }}

@@ -1,0 +1,10 @@
+{{ define "main" }}
+
+    <h1 class="col-12">
+        {{ .Title | markdownify }}
+    </h1>
+    <div class="content col-12">
+        {{ .Content }}
+    </div>
+    
+{{ end }}

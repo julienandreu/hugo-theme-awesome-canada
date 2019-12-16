@@ -1,0 +1,12 @@
+<header style="background-image: url({{ ( .Params.Image | default .Site.Params.Header.Background ) | absURL }})">
+    <div class="title container-md d-none d-md-block d-lg-block d-xl-block">
+        <a href="{{ .Site.BaseURL }}" title="{{- .Site.Title -}}" rel="noopener">
+            {{- .Site.Params.Header.title | safeHTML -}}
+        </a>
+    </div>
+    <div class="title container-md d-block d-md-none d-lg-none d-xl-none">
+        <a href="{{ .Site.BaseURL }}" title="{{- .Site.Title -}}" rel="noopener">
+            {{- .Site.Params.Header.MobileTitle | safeHTML -}}
+        </a>
+    </div>
+</header>

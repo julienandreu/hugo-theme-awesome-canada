@@ -1,0 +1,12 @@
+<div class="menu">
+    <nav class="col-12">
+        {{ $currentPage := . }}
+        {{ range .Site.Menus.main }}
+            {{ $active := or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
+            {{ $active = or $active (and (eq $currentPage.Section .Identifier)) }}
+            <a href="{{ .URL }}" title="{{ .Name }}" class="{{ if $active }}active{{ end }}" rel="noopener">
+                {{ .Name }}
+            </a>
+        {{ end }}
+    </nav>
+</div>
