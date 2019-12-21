@@ -11,6 +11,7 @@
 <meta name="twitter:description"
       content="{{ if .Description }}{{ .Description }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ end }}{{ end }}"/>
 <meta name="twitter:image" content="{{ ( .Params.Image | default .Site.Params.Header.Background ) | absURL }}"/>
+<meta name="twitter:summary_large_image" content="{{ ( .Params.Image | default .Site.Params.Header.Background ) | absURL }}"/>
 
 <script type="application/ld+json">
 {
